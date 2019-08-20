@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomePage.master.cs" Inherits="goodfood.HomePage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>GoodFood</title>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      
+        <link href="css/CSS_home.css" rel="stylesheet" type="text/css" />
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" ></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+   
+</head>
+<body>
+    <form id="form1" runat="server">
+      <div id="wrapper">
+           <div id="header">
+              <div class="jumbotron text-center" style="margin-bottom:0" >
+    
+                    <h1><b>Good Food</b></h1>
+                     <p><i>Simply The Best!</i></p>
+    
+             </div>
+           </div>
+          
+          <div id="navbar">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                     <!-- Brand -->
+                    <a class="navbar-brand" href="#">Good Food</a>
+
+                     <!-- Toggler/collapsibe Button -->
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                         <span class="navbar-toggler-icon"></span>
+                     </button>
+
+                     <!-- Navbar links -->
+                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                     <ul class="navbar-nav">
+                         <li class="nav-item">
+                            <a class="nav-link" href="HomePage.aspx">Home</a>
+                         </li>
+                    
+                         <li class="nav-item">
+                             <a class="nav-link" href="MenuPage.aspx">Menu</a>
+                         </li>
+     
+                          <li class="nav-item">
+                             <a class="nav-link" href="Shop.aspx">Order</a>
+                         </li>
+                         <li class="nav-item dropdown">
+                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                 Management
+                             </a>
+                                 <div class="dropdown-menu bg-dark">
+                                     <a class="dropdown-item" href="MenuOverview.aspx">Menu Overview</a>
+                                     <a class="dropdown-item" href="MenuAdd.aspx">Menu Add</a>
+                                 </div>
+                         </li>
+                         
+                    </ul>
+                      
+                  </div>
+                     <div id="Login" align:"right">
+                        <asp:Label ID="lblLogin" runat="server" ForeColor="White" Text=""></asp:Label>
+                        <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="White" OnClick="LinkButton1_Click">LinkButton</asp:LinkButton>
+
+                    </div>
+                   
+                </nav>
+             </div>
+             
+         <div id="content_area">
+   
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+             </asp:ContentPlaceHolder>
+   
+         </div>
+   
+    
+        <div id="footer" class="text-center bg-dark fixed-bottom">
+             <p>&copy; GoodFood2019 All rights reserved</p>
+        </div>
+        </div>
+          
+    </form>
+</body>
+</html>
